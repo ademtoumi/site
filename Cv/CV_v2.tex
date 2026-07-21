@@ -1,0 +1,212 @@
+% ============================================================
+%  TOUMI ADEM — Academic & Engineering CV (2026)
+%  Compiled with: pdflatex CV_v2.tex
+% ============================================================
+\documentclass[10pt, letterpaper]{article}
+
+% ---- Encoding & fonts ----
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter} % Premium professional font
+
+% ---- Page geometry ----
+\usepackage[left=0.55in, right=0.55in, top=0.5in, bottom=0.5in]{geometry}
+
+% ---- Micro-typography ----
+\usepackage[protrusion=true, expansion=true]{microtype}
+
+% ---- Lists & tables ----
+\usepackage{enumitem}
+\usepackage{tabularx}
+\setlist[itemize]{leftmargin=12pt, itemsep=2.5pt, topsep=2pt, parsep=0pt}
+
+% ---- Hyperlinks ----
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle  = {Adem Toumi -- Curriculum Vitae},
+  pdfauthor = {Adem Toumi},
+}
+
+% ---- Section titles ----
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries\scshape}  % Bold small caps for premium academic feel
+  {}{0pt}{}                  % no label
+  [\vspace{-4pt}\rule{\linewidth}{0.6pt}]  % slightly thicker line
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% ---- No page numbers ----
+\pagestyle{empty}
+
+% ---- Spacing helpers ----
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ----------------------------------------------------------------
+\begin{document}
+
+% ================================================================
+%  HEADER
+% ================================================================
+\begin{center}
+  {\Huge\bfseries Adem Toumi}\\[4pt]
+  {\large\bfseries Artificial Intelligence \& Data Science Engineer}\\[6pt]
+  {\small
+    +213 795 016 471
+    \textbar{}~Biskra, Algeria
+    \textbar{}~\href{mailto:addz1606@gmail.com}{addz1606@gmail.com}
+    \textbar{}~\href{https://www.linkedin.com/in/toumi-adem-a0b4342b7/}{LinkedIn}
+    \textbar{}~\href{https://github.com/ademtoumi}{GitHub}
+  }
+\end{center}
+
+\vspace{4pt}
+
+% ================================================================
+%  PROFESSIONAL SUMMARY
+% ================================================================
+\section{Professional Summary}
+AI \& Data Science Engineer trained at the Higher School of Computer Science (ESI-SBA), Algeria. Solid background across Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Large Language Models, Software Engineering, and AI Application Development. Focused on applying theoretical foundations to design reliable intelligent systems and practical software applications.
+
+% ================================================================
+%  EDUCATION
+% ================================================================
+\section{Education}
+
+\textbf{Higher School of Computer Science (ESI-SBA)} \hfill Sidi Bel Abbès, Algeria\\
+\textit{State Engineer's Degree \& M.Sc. in Artificial Intelligence and Data Science} \hfill Sep. 2021\,--\,Jul. 2026
+\begin{itemize}
+  \item \textbf{Curriculum:} Specialized in machine learning, deep learning, computer vision, natural language processing, distributed systems, big data architectures, and software engineering.
+  \item \textbf{Thesis \& Graduation Project (PFE):} \textit{Log-Based Anomaly Detection in Distributed Systems} (Joint Engineering \& Master's Thesis under supervision of Dr. Sidi Mohammed Benslimane \& Dr. Mohammed Bekkouche).
+\end{itemize}
+
+% ================================================================
+%  TECHNICAL SKILLS
+% ================================================================
+\section{Technical Skills}
+
+\begin{tabularx}{\linewidth}{@{}p{1.7in}X@{}}
+  \textbf{AI \& Data Science:}       & Python, Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, OpenCV, XGBoost, FastAPI \\[2pt]
+  \textbf{Data Engineering:}       & SQL, PostgreSQL, Apache Spark, Apache Kafka, MLflow \\[2pt]
+  \textbf{Programming Languages:}   & Python, Java, Dart, JavaScript, TypeScript \\[2pt]
+  \textbf{Web \& Mobile:}          & React, Next.js, Flutter, Node.js, HTML, Tailwind CSS, Android (Java) \\[2pt]
+  \textbf{Tools \& Infrastructure:} & Git, Docker, Linux, HuggingFace Spaces
+\end{tabularx}
+
+% ================================================================
+%  EXPERIENCE
+% ================================================================
+\section{Research \& Industry Experience}
+
+\textbf{Research Intern -- Object Detection \& Tracking for UAV Systems} \hfill Feb. 2025\,--\,Jun. 2025\\
+\textit{Electronic Systems Research and Development Unit (URD Laboratory)}, Sidi Bel Abbès, Algeria
+\begin{itemize}
+  \item Fine-tuned object detection models including YOLOv11s on aerial imagery datasets.
+  \item Integrated DeepSort and CSRT multi-object tracking algorithms across sequential video frames.
+  \item Evaluated edge-device real-time inference performance on Raspberry Pi 5 with Intel Movidius NCS 2 hardware acceleration.
+  \item Developed a Tkinter-based Ground Control Station (GCS) featuring live video stream decoding and telemetry over custom UDP protocols.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Intern -- Database \& Network Administration} \hfill Sep. 2024\,--\,Present\\
+\textit{Sonatrach, Direction Maintenance}, Biskra, Algeria
+\begin{itemize}
+  \item Performed database administration tasks including SQL query optimization and schema maintenance.
+  \item Supported network administration, system monitoring, and automated data backup scripts.
+\end{itemize}
+
+% ================================================================
+%  SELECTED PROJECTS
+% ================================================================
+\section{Selected Projects}
+
+\noindent\textbf{Artificial Intelligence \& Data Science Projects}
+
+\vspace{3pt}
+
+\textbf{Log-Based Anomaly Detection in Distributed Systems (PFE \& Thesis)} \hfill \textit{Python, PyTorch, Kafka, FastAPI, Streamlit}
+\begin{itemize}
+  \item Evaluated 11 machine learning, deep learning, and transformer models (including SVM, Random Forest, BiLSTM, Autoencoders, and LogBERT) across distributed system log datasets under strict temporal data splitting.
+  \item Built a real-time streaming pipeline using Apache Kafka for data ingestion, cloud-deployed FastAPI services for inference, PostgreSQL for storage, and an interactive Streamlit monitoring dashboard.
+  \item Integrated post-hoc Explainable AI (SHAP and LIME) to provide local and global interpretability for log-level anomaly detection.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Object Detection and Tracking for UAV Applications (Academic Project)} \hfill \textit{Python, PyTorch, OpenCV, YOLO}
+\begin{itemize}
+  \item Fine-tuned deep learning object detection models (YOLOv11s) on aerial imagery datasets for target identification under drone surveillance conditions.
+  \item Integrated multi-object tracking algorithms (DeepSort and CSRT) across sequential video streams to ensure continuous object tracking under camera motion and scale variation.
+  \item Evaluated edge-device real-time inference on Raspberry Pi 5 accelerated by Intel Movidius NCS 2, and built a Tkinter Ground Control Station (GCS) with live UDP telemetry.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Real-Time Monitoring and Anomaly Detection (Deep Learning Project)} \hfill \textit{Python, PyTorch, Prometheus, Grafana}
+\begin{itemize}
+  \item Designed a time-series monitoring pipeline for system CPU/GPU metrics using Prometheus and Grafana.
+  \item Built and trained a hybrid VAE-LSTM model in PyTorch to detect abnormal operational behavior and send live notifications.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Multi-Class Malicious URL Detection (Machine Learning Project)} \hfill \textit{Python, Scikit-Learn, XGBoost, TensorFlow}
+\begin{itemize}
+  \item Developed a machine learning classifier to identify malicious web URLs using character n-grams and structural URL features.
+  \item Compared multiple classification models (Random Forest, XGBoost, LSTM) to deliver fast, content-independent web security analysis.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Paraphrase Detection System (NLP Project)} \hfill \textit{Python, PyTorch, spaCy, NLTK}
+\begin{itemize}
+  \item Designed a Siamese neural network with shared weights to detect semantic sentence similarity across sentence pairs.
+  \item Utilized Bi-LSTM layers and multi-head attention mechanisms to capture contextual semantic relationships.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{Movie Recommendation System (Mini Project)} \hfill \textit{Python, Scikit-Learn, MLflow, Streamlit}
+\begin{itemize}
+  \item Implemented a recommender system using collaborative filtering and association rule mining (Apriori, FP-Growth).
+  \item Tracked experiment parameters using MLflow and deployed an interactive Streamlit user interface.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent\textbf{Software Engineering Projects}
+
+\vspace{3pt}
+
+\textbf{HajjPortal -- Multilingual Pilgrimage Platform} \hfill \textit{TypeScript, Next.js 14, React, Socket.io, TanStack Query}
+\begin{itemize}
+  \item Developed a full-stack, trilingual (Arabic, English, French) web platform with Next.js 14 App Router, complete RTL/LTR layout support, and Zod validation.
+  \item Integrated a real-time administrative control dashboard using Socket.io and TanStack Query state synchronization.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{KidLink -- School Communication Platform} \hfill \textit{Dart, Flutter, Firebase, Provider}
+\begin{itemize}
+  \item Built a cross-platform mobile application using Flutter and Provider to streamline parent-teacher communication in primary schools.
+  \item Integrated Firebase Authentication, Cloud Firestore for offline-first data synchronization, and Firebase Cloud Messaging (FCM) for push notifications.
+\end{itemize}
+
+\vspace{3pt}
+
+\textbf{XAI Log Anomaly Detection Showcase} \hfill \textit{React 18, Vite 5, Framer Motion, Tailwind CSS}
+\begin{itemize}
+  \item Developed an interactive single-page web application using React 18, Vite, and Tailwind CSS to display PFE benchmark findings.
+  \item Implemented interactive data visualizations using Recharts and explainable AI galleries.
+\end{itemize}
+
+% ================================================================
+%  LANGUAGES
+% ================================================================
+\section{Languages}
+
+Arabic \qquad\textbar\qquad French \qquad\textbar\qquad English
+
+% ================================================================
+\end{document}
