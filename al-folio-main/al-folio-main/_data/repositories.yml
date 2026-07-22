@@ -1,0 +1,16 @@
+github_users:
+  - ademtoumi
+
+repo_description_lines_max: 2
+
+github_repos:
+  - ademtoumi/log-anomaly-detection
+  - ademtoumi/UAV-Object-Detection-Tracking
+  - ademtoumi/Malicious-URL-Detection
+  - ademtoumi/Paraphrase-Detection
+  - ademtoumi/hajj-platform-frontend
+  - ademtoumi/hajj-platform-admin
+  - ademtoumi/KidLink-App
+  - ademtoumi/pfe-showcase
+
+

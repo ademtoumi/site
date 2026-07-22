@@ -32,11 +32,12 @@
       </a>
 
       <ul class="nav-menu" id="navMenu" role="list">
-        <li><a href="#about"     class="nav-link">About</a></li>
-        <li><a href="#projects"  class="nav-link">Projects</a></li>
-        <li><a href="#skills"    class="nav-link">Skills</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#contact"   class="nav-link">Contact</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
         <li><a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-cv">CV ↗</a></li>
       </ul>
 
@@ -89,7 +90,7 @@
         <h1 class="hero-name">Adem Toumi</h1>
 
         <p class="hero-subtitle">
-          AI &amp; Data Science Engineer
+          AI &amp; Data Science <span class="typed-text" id="typedText">Engineer</span><span class="cursor">|</span>
         </p>
 
         <p class="hero-bio">
@@ -191,9 +192,85 @@
 
 
     <!-- ======================================================
+         EXPERIENCE
+         ====================================================== -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Trajectory</span></div>
+        <h2 class="section-title fade-in">Research &amp; Experience</h2>
+        <p class="section-desc fade-in">
+          Applied research and industry internships focusing on computer vision, autonomous UAV systems, database administration, and system reliability.
+        </p>
+
+        <div class="exp-timeline">
+
+          <!-- URD Lab -->
+          <div class="exp-entry fade-in">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Research Intern &mdash; Object Detection &amp; Tracking for UAV Systems</h3>
+                  <p class="exp-company">
+                    Electronic Systems Research and Development Unit (URD Laboratory) &bull; Sidi Bel Abbès, Algeria
+                  </p>
+                </div>
+                <span class="exp-period">Feb. 2025 &ndash; Jun. 2025</span>
+              </div>
+              <ul class="exp-list">
+                <li>Fine-tuned object detection models (YOLOv11s) on aerial imagery datasets for target identification under drone surveillance conditions.</li>
+                <li>Integrated DeepSort and CSRT multi-object tracking algorithms across sequential video frames to maintain continuous target tracking.</li>
+                <li>Evaluated edge-device real-time inference performance on Raspberry Pi 5 with Intel Movidius NCS 2 hardware acceleration.</li>
+                <li>Developed a Tkinter Ground Control Station (GCS) featuring live video stream decoding and telemetry over custom UDP protocols.</li>
+              </ul>
+              <div class="tag-group exp-tags">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">YOLOv11</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">DeepSort</span>
+                <span class="tag">Raspberry Pi 5</span>
+                <span class="tag">Intel NCS 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sonatrach -->
+          <div class="exp-entry fade-in">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Intern &mdash; Database &amp; Network Administration</h3>
+                  <p class="exp-company">
+                    Sonatrach, Direction Maintenance &bull; Biskra, Algeria
+                  </p>
+                </div>
+                <span class="exp-period">Sep. 2024 &ndash; Present</span>
+              </div>
+              <ul class="exp-list">
+                <li>Performed database administration tasks including SQL query optimization, performance tuning, and schema maintenance.</li>
+                <li>Supported network administration, system monitoring, and automated data backup scripts.</li>
+              </ul>
+              <div class="tag-group exp-tags">
+                <span class="tag">SQL</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Database Administration</span>
+                <span class="tag">Linux</span>
+                <span class="tag">Shell Scripting</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
          PROJECTS
          ====================================================== -->
-    <section class="section section-alt" id="projects">
+    <section class="section" id="projects">
       <div class="container">
         <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Work</span></div>
         <h2 class="section-title fade-in">Featured Projects</h2>
@@ -288,6 +365,51 @@
 
         <!-- ── Project Grid ── -->
         <div class="projects-grid">
+
+          <!-- KnowledgeHub AI (Flagship RAG Platform) -->
+          <article class="project-card fade-in" data-cat="nlp">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-nlp">RAG &amp; LLMs</span>
+                <span class="badge badge-dl">Flagship AI Project</span>
+                <span class="badge badge-ds">Hybrid Search</span>
+                <span class="badge badge-xai">Explainable AI</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2026</span>
+              </div>
+              <a href="https://github.com/ademtoumi/KnowledgeHub-AI"
+                 target="_blank" rel="noopener noreferrer"
+                 class="icon-btn repo-button" title="View Repository"
+                 aria-label="View Repository: KnowledgeHub AI — Retrieval-Augmented Generation Platform">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+                <span class="sr-only">View Repository</span>
+              </a>
+            </div>
+            <h3 class="proj-title">KnowledgeHub AI — Retrieval-Augmented Generation (RAG) Platform</h3>
+            <p class="proj-desc">
+              Designed and developed a production-ready Retrieval-Augmented Generation (RAG) platform for intelligent document understanding and question answering.<br />
+              The system combines Hybrid Retrieval (FAISS + BM25), Cross-Encoder Reranking, Explainable AI (XAI), Google Gemini LLM, and a modern React interface to deliver accurate, transparent, and context-aware responses.
+            </p>
+            <div class="proj-metrics">
+              <span class="metric metric-highlight">Hybrid Search (FAISS + BM25)</span>
+              <span class="metric">Cross-Encoder Reranking</span>
+              <span class="metric">Explainable AI (XAI)</span>
+              <span class="metric">Google Gemini LLM</span>
+            </div>
+            <div class="tag-group">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">BM25</span>
+              <span class="tag">Sentence Transformers</span>
+              <span class="tag">Cross-Encoder</span>
+              <span class="tag">Google Gemini</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">React Query</span>
+              <span class="tag">Docker</span>
+            </div>
+          </article>
 
           <!-- UAV Object Detection -->
           <article class="project-card fade-in" data-cat="internship">
@@ -587,7 +709,7 @@
     <!-- ======================================================
          SKILLS
          ====================================================== -->
-    <section class="section" id="skills">
+    <section class="section section-alt" id="skills">
       <div class="container">
         <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Expertise</span></div>
         <h2 class="section-title fade-in">Technical Skills</h2>
@@ -651,7 +773,6 @@
               <span class="tag">Node.js</span>
               <span class="tag">HTML</span>
               <span class="tag">Tailwind CSS</span>
-              <span class="tag">SQL</span>
               <span class="tag">Android (Java)</span>
             </div>
           </div>
@@ -675,7 +796,7 @@
     <!-- ======================================================
          EDUCATION
          ====================================================== -->
-    <section class="section section-alt" id="education">
+    <section class="section" id="education">
       <div class="container">
         <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Academic</span></div>
         <h2 class="section-title fade-in">Education</h2>
