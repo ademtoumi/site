@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adem Toumi — AI, Data Science & Data Engineering Professional. Designing data pipelines, performing data analysis, and building intelligent software systems." />
+  <meta property="og:title" content="Adem Toumi · AI, Data Science & Data Engineering" />
+  <meta property="og:description" content="Professional portfolio of Adem Toumi — ESI-SBA State Engineer & M.Sc. in Artificial Intelligence & Data Science." />
+  <meta property="og:type" content="website" />
+  <title>Adem Toumi · AI, Data Science &amp; Data Engineering</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+    </symbol>
+  </svg>
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo" aria-label="Adem Toumi — Home">
+        <span class="logo-bracket">[</span><span class="logo-initials">AT</span><span class="logo-bracket">]</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+        <li><a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" download="Adem_Toumi_CV.pdf" class="nav-link nav-link-cv">CV ↗</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1"  x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22"  y1="4.22"  x2="5.64"  y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1"  y1="12" x2="3"  y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+            <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ======================================================
+         HERO
+         Task 2 Fix: Strong, static role title (no rotating glitches)
+         Task 1 Fix: Explicit AI, Data Science & Data Engineering identity
+         ====================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-dots"></div>
+        <div class="hero-glow"></div>
+      </div>
+
+      <div class="hero-content container">
+        <p class="hero-greeting">Hello, I'm</p>
+
+        <h1 class="hero-name">Adem Toumi</h1>
+
+        <p class="hero-subtitle" style="font-size: 1.35rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem;">
+          AI Engineer &nbsp;·&nbsp; Data Engineer &nbsp;·&nbsp; Data Analyst
+        </p>
+
+        <p class="hero-bio">
+          AI, Data &amp; Software Engineer graduating July 2026 from <a href="https://www.esi-sba.dz" target="_blank" rel="noopener noreferrer" class="text-link">ESI-SBA</a> with a dual State Engineer's Degree and M.Sc. in Artificial Intelligence &amp; Data Science. Combines analytical depth with practical software engineering to build complete, production-ready intelligent systems &mdash; spanning real-time data pipelines, machine learning models, and scalable applications.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">
+            View Projects
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" download="Adem_Toumi_CV.pdf" class="btn btn-outline">Download CV ↗</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/ademtoumi" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/toumi-adem-a0b4342b7/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="mailto:a.toumi@esi-sba.dz" class="social-link" aria-label="Send email">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            a.toumi@esi-sba.dz
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint-label">Scroll</span>
+        <div class="scroll-hint-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         ABOUT
+         ====================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Background</span></div>
+        <h2 class="section-title fade-in">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text fade-in">
+            <p>
+              AI, Data &amp; Software Engineer graduating July 2026 from the Higher School of Computer Science (ESI-SBA), Algeria, with a dual State Engineer's Degree and M.Sc. in Artificial Intelligence &amp; Data Science.
+            </p>
+            <p>
+              I work across the full data and AI spectrum — from data collection, cleaning, and analysis, to building real-time streaming pipelines, training and benchmarking machine learning models, and deploying end-to-end software systems. I combine analytical depth with engineering rigour to produce reliable, production-ready results.
+            </p>
+          </div>
+
+          <aside class="about-card fade-in">
+            <div class="about-photo-wrap">
+              <div class="about-photo">
+                <img src="photo.jpg" alt="Adem Toumi" loading="lazy" />
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Institution</span>
+              <span class="info-val">Higher School of Computer Science (ESI-SBA)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Degree</span>
+              <span class="info-val">State Engineer &amp; M.Sc. in AI &amp; Data Science</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Location</span>
+              <span class="info-val">Biskra, Algeria</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Languages</span>
+              <span class="info-val">Arabic &nbsp;·&nbsp; French &nbsp;·&nbsp; English</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Email</span>
+              <a href="mailto:a.toumi@esi-sba.dz" class="info-link">a.toumi@esi-sba.dz</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         EXPERIENCE
+         ====================================================== -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Trajectory</span></div>
+        <h2 class="section-title fade-in">Research &amp; Industry Experience</h2>
+        <p class="section-desc fade-in">
+          Applied research and industry experience spanning computer vision, embedded system design, database administration, and system reliability.
+        </p>
+
+        <div class="exp-timeline">
+
+          <!-- URD Lab -->
+          <div class="exp-entry fade-in">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Research Intern &mdash; Computer Vision &amp; Embedded Systems</h3>
+                  <p class="exp-company">
+                    Electronic Systems Research and Development Unit (URD Laboratory) &bull; Sidi Bel Abbès, Algeria
+                  </p>
+                </div>
+                <span class="exp-period">Feb. 2025 &ndash; Jun. 2025</span>
+              </div>
+              <ul class="exp-list">
+                <li>Developed a real-time aerial surveillance system for UAVs — trained object detection models on aerial datasets (mAP@0.5 ≈ 0.85), integrated dual tracking pipelines, and deployed the full inference stack on edge hardware (Raspberry Pi 5 + Intel Movidius NCS 2).</li>
+                <li>Designed the complete hardware-software architecture: custom UDP video streaming to a Ground Control Station, automated gimbal control that keeps tracked targets centered, and an interactive operator interface with live telemetry.</li>
+              </ul>
+              <div class="tag-group exp-tags">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">YOLOv11</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">DeepSort</span>
+                <span class="tag">Raspberry Pi 5</span>
+                <span class="tag">Intel NCS 2</span>
+                <span class="tag">UDP Protocol</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sonatrach -->
+          <div class="exp-entry fade-in">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">IT Intern &mdash; Database &amp; Network Administration</h3>
+                  <p class="exp-company">
+                    Sonatrach, Direction Maintenance &bull; Biskra, Algeria
+                  </p>
+                </div>
+                <span class="exp-period">Sep. 2024</span>
+              </div>
+              <ul class="exp-list">
+                <li>Optimized SQL queries, maintained database schemas, and automated backup scripts in an industrial maintenance environment.</li>
+                <li>Supported network administration and system monitoring tasks for operational maintenance databases.</li>
+              </ul>
+              <div class="tag-group exp-tags">
+                <span class="tag">SQL</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Database Administration</span>
+                <span class="tag">Linux</span>
+                <span class="tag">Shell Scripting</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         PROJECTS
+         ====================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Work</span></div>
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <p class="section-desc fade-in">
+          Selected engineering projects across AI systems, real-time data pipelines, computer vision, and full-stack software development.
+        </p>
+
+        <!-- ── Featured: Master's & Engineering Thesis ── -->
+        <article class="project-featured fade-in" data-cat="thesis" onclick="openCaseStudy('logAnomaly')" style="cursor:pointer;">
+          <div class="project-feat-inner">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-thesis">Engineering &amp; Master's Graduation Thesis</span>
+                <span class="badge badge-ds">Data Engineering</span>
+                <span class="badge badge-ml">Machine Learning</span>
+                <span class="badge badge-dl">Deep Learning</span>
+                <span class="badge badge-nlp">Transformers</span>
+                <span class="badge badge-mlops">Real-Time Streaming</span>
+                <span class="badge badge-xai">Explainable AI (XAI)</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2025–2026</span>
+              </div>
+              <div class="plinks" onclick="event.stopPropagation();">
+                <a href="https://github.com/ademtoumi/log-anomaly-detection"
+                   target="_blank" rel="noopener noreferrer"
+                   class="icon-btn repo-button" title="View Repository"
+                   aria-label="View Repository: Log-Based Anomaly Detection in Distributed Systems">
+                  <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+                  <span class="sr-only">View Repository</span>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="proj-feat-title" onclick="openCaseStudy('logAnomaly')">Log-Based Anomaly Detection in Distributed Systems:<br/><span class="proj-feat-subtitle">Real-Time Infrastructure Pipeline, Multi-Model Benchmark, and Explainable AI</span></h3>
+
+            <p class="proj-feat-desc">
+              Real-time distributed log anomaly detection streaming pipeline built with Apache Kafka, cloud ML/Transformer models, PostgreSQL, Streamlit, and SHAP/LIME Explainable AI.
+            </p>
+
+            <div class="feat-stats-bar">
+              <div class="feat-stat">
+                <span class="feat-stat-num">11</span>
+                <span class="feat-stat-lbl">Models Benchmarked</span>
+              </div>
+              <div class="feat-stat-sep" aria-hidden="true"></div>
+              <div class="feat-stat">
+                <span class="feat-stat-num">3</span>
+                <span class="feat-stat-lbl">Log Corpora</span>
+              </div>
+              <div class="feat-stat-sep" aria-hidden="true"></div>
+              <div class="feat-stat">
+                <span class="feat-stat-num">0.9958</span>
+                <span class="feat-stat-lbl">Peak F1 (HDFS)</span>
+              </div>
+              <div class="feat-stat-sep" aria-hidden="true"></div>
+              <div class="feat-stat feat-stat-text">
+                <span class="feat-stat-lbl">Kafka → Cloud Inference → PostgreSQL → Dashboard</span>
+              </div>
+              <div class="feat-stat-sep" aria-hidden="true"></div>
+              <div class="feat-stat feat-stat-text">
+                <span class="feat-stat-lbl">SHAP &amp; LIME Token-Level XAI</span>
+              </div>
+            </div>
+
+            <div class="proj-feat-footer" onclick="event.stopPropagation();">
+              <div class="tag-group">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Apache Kafka</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">SHAP</span>
+                <span class="tag">LIME</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="doc-links">
+                <button onclick="openCaseStudy('logAnomaly')" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">Case Study ↗</button>
+                <a href="https://github.com/ademtoumi/log-anomaly-detection/blob/main/Engineer_Thesis.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">Engineering Thesis ↗</a>
+                <a href="https://github.com/ademtoumi/log-anomaly-detection/blob/main/Master_Thesis.pdf" target="_blank" rel="noopener noreferrer" class="doc-link">Master's Thesis ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Project Grid ── -->
+        <div class="projects-grid">
+
+          <!-- KnowledgeHub AI (Flagship RAG Platform) -->
+          <article class="project-card fade-in" data-cat="nlp" onclick="openCaseStudy('knowledgeHub')" style="cursor:pointer;">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-nlp">RAG &amp; LLMs</span>
+                <span class="badge badge-dl">Flagship AI Engineering</span>
+                <span class="badge badge-ds">Hybrid Search</span>
+                <span class="badge badge-xai">Explainable AI</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2026</span>
+              </div>
+              <a href="https://github.com/ademtoumi/KnowledgeHub-AI" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: KnowledgeHub AI" onclick="event.stopPropagation();">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+              </a>
+            </div>
+            <h3 class="proj-title" onclick="openCaseStudy('knowledgeHub')">KnowledgeHub AI — Enterprise RAG Platform</h3>
+            <p class="proj-desc">
+              Production-ready document intelligence platform featuring Hybrid Search (FAISS + BM25), Cross-Encoder reranking, Explainable AI citations, FastAPI, and React 18.
+            </p>
+            <div class="proj-metrics">
+              <span class="metric metric-highlight">Hybrid Search (FAISS + BM25)</span>
+              <span class="metric">Cross-Encoder Reranking</span>
+              <span class="metric">Explainable AI (XAI)</span>
+              <span class="metric">116 Automated Tests</span>
+            </div>
+            <div class="tag-group" style="margin-bottom:1rem;">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">BM25</span>
+              <span class="tag">Cross-Encoder</span>
+              <span class="tag">Google Gemini</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
+              <button onclick="openCaseStudy('knowledgeHub')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
+              <a href="https://github.com/ademtoumi/KnowledgeHub-AI" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- UAV Object Detection -->
+          <article class="project-card fade-in" data-cat="internship" onclick="openCaseStudy('uavDetection')" style="cursor:pointer;">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-cv">Computer Vision</span>
+                <span class="badge badge-dl">Deep Learning</span>
+                <span class="badge badge-internship">Edge AI &amp; Hardware</span>
+                <span class="badge badge-meta">URD Lab &nbsp;·&nbsp; 2024–2025</span>
+              </div>
+              <a href="https://github.com/ademtoumi/UAV-Object-Detection-Tracking" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: UAV Object Detection" onclick="event.stopPropagation();">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+              </a>
+            </div>
+            <h3 class="proj-title" onclick="openCaseStudy('uavDetection')">Real-Time Multi-Object Detection &amp; Tracking for UAV Surveillance</h3>
+            <p class="proj-desc">
+              Aerial drone surveillance pipeline with fine-tuned YOLOv11s object detection (mAP@0.5 ≈ 0.85), DeepSort/CSRT tracking, and edge AI hardware acceleration on Raspberry Pi 5.
+            </p>
+            <div class="proj-metrics">
+              <span class="metric metric-highlight">mAP@0.5 ≈ 0.85</span>
+              <span class="metric">DeepSort + CSRT Tracking</span>
+              <span class="metric">Raspberry Pi 5 + NCS 2 Edge</span>
+            </div>
+            <div class="tag-group" style="margin-bottom:1rem;">
+              <span class="tag">Python</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">YOLOv11</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">DeepSort</span>
+              <span class="tag">Raspberry Pi 5</span>
+              <span class="tag">Intel NCS 2</span>
+            </div>
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
+              <button onclick="openCaseStudy('uavDetection')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
+              <a href="https://github.com/ademtoumi/UAV-Object-Detection-Tracking" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- Malicious URL Detection -->
+          <article class="project-card fade-in" data-cat="ml" onclick="openCaseStudy('maliciousUrl')" style="cursor:pointer;">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-ml">Machine Learning</span>
+                <span class="badge badge-ds">Data Science</span>
+                <span class="badge badge-cv">Cybersecurity</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2024–2025</span>
+              </div>
+              <a href="https://github.com/ademtoumi/Malicious-URL-Detection" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: Malicious URL Detection" onclick="event.stopPropagation();">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+              </a>
+            </div>
+            <h3 class="proj-title" onclick="openCaseStudy('maliciousUrl')">Multi-Class Malicious URL Detection via Hybrid Feature Engineering</h3>
+            <p class="proj-desc">
+              Cybersecurity ML classifier detecting phishing, malware, and defacement URLs using character n-grams and structural features (96.8% accuracy across 651K URLs).
+            </p>
+            <div class="proj-metrics">
+              <span class="metric metric-highlight">96.8% Accuracy</span>
+              <span class="metric">651,191 URLs</span>
+              <span class="metric">4 Threat Classes</span>
+            </div>
+            <div class="tag-group" style="margin-bottom:1rem;">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Pandas</span>
+            </div>
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
+              <button onclick="openCaseStudy('maliciousUrl')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
+              <a href="https://github.com/ademtoumi/Malicious-URL-Detection/blob/main/report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Report PDF ↗</a>
+            </div>
+          </article>
+
+          <!-- Paraphrase Detection -->
+          <article class="project-card fade-in" data-cat="nlp" onclick="openCaseStudy('paraphrase')" style="cursor:pointer;">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-nlp">NLP</span>
+                <span class="badge badge-dl">Deep Learning</span>
+                <span class="badge badge-ds">Semantic Similarity</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2024–2025</span>
+              </div>
+              <a href="https://github.com/ademtoumi/Paraphrase-Detection" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: Paraphrase Detection" onclick="event.stopPropagation();">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+              </a>
+            </div>
+            <h3 class="proj-title" onclick="openCaseStudy('paraphrase')">Paraphrase Detection via Siamese Attention Deep Learning</h3>
+            <p class="proj-desc">
+              Sentence-level semantic similarity architecture using a Siamese Bi-LSTM neural network with multi-head attention trained on PAWS and QQP benchmarks.
+            </p>
+            <div class="proj-metrics">
+              <span class="metric">≈450K Sentence Pairs</span>
+              <span class="metric">Multi-Head Attention</span>
+              <span class="metric">Siamese Architecture</span>
+            </div>
+            <div class="tag-group" style="margin-bottom:1rem;">
+              <span class="tag">Python</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">spaCy</span>
+              <span class="tag">NLTK</span>
+              <span class="tag">WordNet</span>
+            </div>
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
+              <button onclick="openCaseStudy('paraphrase')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
+              <a href="https://github.com/ademtoumi/Paraphrase-Detection" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- HajjPortal -->
+          <article class="project-card fade-in" data-cat="web" onclick="openCaseStudy('hajjPortal')" style="cursor:pointer;">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-se">Software Engineering</span>
+                <span class="badge badge-web">Full-Stack Web</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2023–2024</span>
+              </div>
+              <a href="https://github.com/ademtoumi/hajj-platform-frontend" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: HajjPortal" onclick="event.stopPropagation();">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+              </a>
+            </div>
+            <h3 class="proj-title" onclick="openCaseStudy('hajjPortal')">HajjPortal — Trilingual Pilgrimage Management Platform</h3>
+            <p class="proj-desc">
+              Full-stack web application with Next.js 14 App Router, dynamic RTL/LTR trilingual support, JWT authentication, and Socket.io real-time updates.
+            </p>
+            <div class="proj-metrics">
+              <span class="metric">Next.js 14 App Router</span>
+              <span class="metric">Trilingual + RTL/LTR</span>
+              <span class="metric">Socket.io Real-Time</span>
+            </div>
+            <div class="tag-group" style="margin-bottom:1rem;">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Next.js 14</span>
+              <span class="tag">React</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">Zod</span>
+            </div>
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
+              <button onclick="openCaseStudy('hajjPortal')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
+              <a href="https://github.com/ademtoumi/hajj-platform-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
+            </div>
+          </article>
+
+          <!-- KidLink -->
+          <article class="project-card fade-in" data-cat="mobile" onclick="openCaseStudy('kidlink')" style="cursor:pointer;">
+            <div class="prow">
+              <div class="pbadges">
+                <span class="badge badge-se">Software Engineering</span>
+                <span class="badge badge-mobile">Mobile Development</span>
+                <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2022–2023</span>
+              </div>
+              <a href="https://github.com/ademtoumi/KidLink-App" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: KidLink" onclick="event.stopPropagation();">
+                <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+              </a>
+            </div>
+            <h3 class="proj-title" onclick="openCaseStudy('kidlink')">KidLink — Cross-Platform School Communication App</h3>
+            <p class="proj-desc">
+              Cross-platform Flutter mobile app featuring role-based workflows, Firebase Authentication, Cloud Firestore offline persistence, and FCM push notifications.
+            </p>
+            <div class="proj-metrics">
+              <span class="metric">Flutter Cross-Platform</span>
+              <span class="metric">Firebase FCM Push</span>
+              <span class="metric">Role-Based Workflows</span>
+            </div>
+            <div class="tag-group" style="margin-bottom:1rem;">
+              <span class="tag">Dart</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase Auth</span>
+              <span class="tag">Cloud Firestore</span>
+              <span class="tag">Firebase FCM</span>
+            </div>
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
+              <button onclick="openCaseStudy('kidlink')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
+              <a href="https://github.com/ademtoumi/KidLink-App" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
+            </div>
+          </article>
+
+        </div><!-- /.projects-grid -->
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         SKILLS
+         Task 1 Fix: Explicit Data Analyst & Data Engineer skill groups
+         ====================================================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Expertise</span></div>
+        <h2 class="section-title fade-in">Technical Capabilities</h2>
+
+        <div class="skills-grid">
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              Programming Languages
+            </h3>
+            <div class="tag-group">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Java</span>
+            </div>
+          </div>
+
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              Data Analysis &amp; Preprocessing
+            </h3>
+            <div class="tag-group">
+              <span class="tag">Data Collection</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Data Preprocessing</span>
+              <span class="tag">Data Wrangling</span>
+              <span class="tag">Exploratory Data Analysis (EDA)</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+            </div>
+          </div>
+
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              Data Engineering &amp; Streaming
+            </h3>
+            <div class="tag-group">
+              <span class="tag">Apache Kafka</span>
+              <span class="tag">Apache Spark</span>
+              <span class="tag">PySpark</span>
+              <span class="tag">Hadoop</span>
+              <span class="tag">Apache Airflow</span>
+              <span class="tag">Data Ingestion Pipelines</span>
+              <span class="tag">Log Sessionization</span>
+            </div>
+          </div>
+
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              Machine Learning
+            </h3>
+            <div class="tag-group">
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">Supervised &amp; Unsupervised Learning</span>
+              <span class="tag">Model Evaluation</span>
+            </div>
+          </div>
+
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              Deep Learning &amp; Computer Vision
+            </h3>
+            <div class="tag-group">
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Object Detection &amp; Tracking</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Edge Hardware Deployment</span>
+            </div>
+          </div>
+
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              NLP &amp; Generative AI
+            </h3>
+            <div class="tag-group">
+              <span class="tag">Natural Language Processing</span>
+              <span class="tag">Large Language Models</span>
+              <span class="tag">Retrieval-Augmented Generation (RAG)</span>
+              <span class="tag">Semantic Search</span>
+              <span class="tag">Explainable AI (XAI)</span>
+            </div>
+          </div>
+
+          <div class="skill-cat fade-in">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-dot" aria-hidden="true"></span>
+              Databases, Software &amp; Deployment
+            </h3>
+            <div class="tag-group">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Relational &amp; Non-Relational Databases</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         EDUCATION
+         ====================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Academic</span></div>
+        <h2 class="section-title fade-in">Education</h2>
+
+        <div class="edu-entry fade-in">
+          <div class="edu-dot" aria-hidden="true"></div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">
+                  State Engineer's Degree &amp; M.Sc. in Artificial Intelligence and Data Science
+                </h3>
+                <p class="edu-school">
+                  Higher School of Computer Science (ESI-SBA) &mdash; Sidi Bel Abbès, Algeria
+                </p>
+              </div>
+              <span class="edu-period">2021 – 2026</span>
+            </div>
+            <p class="edu-detail">
+              Five-year integrated engineering degree &amp; M.Sc. program specializing in artificial intelligence, machine learning, data engineering, computer vision, NLP, distributed systems, and software engineering.<br />
+              <strong>Dual Thesis (Engineering &amp; M.Sc.):</strong> <em>Log-Based Anomaly Detection in Distributed Systems</em> — research and engineering work submitted for both degrees; benchmarked ML, deep learning, and transformer-based approaches across industrial log datasets and built a real-time streaming pipeline with cloud inference and an explainability dashboard.
+            </p>
+          </div>
+        </div>
+
+        <!-- Coursework -->
+        <div class="coursework-block fade-in">
+          <h3 class="block-label">Academic Coursework &amp; Lab Projects</h3>
+          <div class="coursework-grid">
+
+            <div class="course-card">
+              <h4 class="course-name">Deep Learning</h4>
+              <p class="course-topics">CNNs &nbsp;·&nbsp; RNNs &nbsp;·&nbsp; Transfer Learning &nbsp;·&nbsp; Sequence Modelling &nbsp;·&nbsp; PyTorch</p>
+              <a href="https://github.com/ademtoumi/DL-ESI-SBA-2025" target="_blank" rel="noopener noreferrer" class="course-link">View Labs ↗</a>
+            </div>
+
+            <div class="course-card">
+              <h4 class="course-name">Natural Language Processing</h4>
+              <p class="course-topics">Word2Vec &nbsp;·&nbsp; Transformers &nbsp;·&nbsp; NER &nbsp;·&nbsp; Text Classification &nbsp;·&nbsp; NLTK</p>
+              <a href="https://github.com/ademtoumi/NLP-ESI-SBA-2025" target="_blank" rel="noopener noreferrer" class="course-link">View Labs ↗</a>
+            </div>
+
+            <div class="course-card">
+              <h4 class="course-name">Machine Learning</h4>
+              <p class="course-topics">Regression &nbsp;·&nbsp; SVM &nbsp;·&nbsp; Clustering &nbsp;·&nbsp; Model Evaluation &nbsp;·&nbsp; Scikit-learn</p>
+              <a href="https://github.com/ademtoumi/ML-ESI-SBA-2025" target="_blank" rel="noopener noreferrer" class="course-link">View Labs ↗</a>
+            </div>
+
+            <div class="course-card">
+              <h4 class="course-name">Big Data Engineering</h4>
+              <p class="course-topics">Hadoop &nbsp;·&nbsp; PySpark &nbsp;·&nbsp; Spark SQL &nbsp;·&nbsp; Docker &nbsp;·&nbsp; Apache Airflow</p>
+              <a href="https://github.com/ademtoumi/BigData-ESI-SBA-2025" target="_blank" rel="noopener noreferrer" class="course-link">View Labs ↗</a>
+            </div>
+
+            <div class="course-card">
+              <h4 class="course-name">Augmented &amp; Virtual Reality</h4>
+              <p class="course-topics">Unity &nbsp;·&nbsp; XR Interaction Toolkit &nbsp;·&nbsp; 3D Interactive Environments</p>
+              <a href="https://github.com/ademtoumi/AR-VR-Labs" target="_blank" rel="noopener noreferrer" class="course-link">View Labs ↗</a>
+            </div>
+
+            <div class="course-card">
+              <h4 class="course-name">Movie Recommendation System</h4>
+              <p class="course-topics">Apriori &nbsp;·&nbsp; FP-Growth &nbsp;·&nbsp; Association Rules &nbsp;·&nbsp; MLflow Tracking</p>
+              <a href="https://github.com/ademtoumi/Movie-Recommendation-System" target="_blank" rel="noopener noreferrer" class="course-link">View Project ↗</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         CONTACT
+         ====================================================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-container">
+        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Contact</span></div>
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <p class="section-desc fade-in">
+          Open to full-time engineering and analytics opportunities across AI Engineer, Data Engineer, Data Analyst, and Software Engineer positions. Feel free to reach out directly.
+        </p>
+
+        <div class="contact-list fade-in">
+          <a href="mailto:a.toumi@esi-sba.dz" class="contact-item">
+            <span class="contact-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <div class="contact-text">
+              <span class="contact-lbl">Email Direct</span>
+              <span class="contact-val">a.toumi@esi-sba.dz</span>
+            </div>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/toumi-adem-a0b4342b7/" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </span>
+            <div class="contact-text">
+              <span class="contact-lbl">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/toumi-adem-a0b4342b7</span>
+            </div>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="https://github.com/ademtoumi" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </span>
+            <div class="contact-text">
+              <span class="contact-lbl">GitHub</span>
+              <span class="contact-val">github.com/ademtoumi</span>
+            </div>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-wrap fade-in">
+          <div id="formAlertSuccess" class="form-alert form-alert-success">
+            <svg style="width:20px;height:20px;flex-shrink:0;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Your message has been sent successfully!</span>
+          </div>
+          <div id="formAlertError" class="form-alert form-alert-error">
+            <svg style="width:20px;height:20px;flex-shrink:0;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <span>An error occurred while sending your message. Please try again.</span>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div>
+                <label for="cName" class="form-label">Full Name *</label>
+                <input type="text" id="cName" name="name" class="form-input" placeholder="Your Name" required />
+              </div>
+              <div>
+                <label for="cEmail" class="form-label">Email Address *</label>
+                <input type="email" id="cEmail" name="email" class="form-input" placeholder="you@company.com" required />
+              </div>
+              <div class="form-group-full">
+                <label for="cSubject" class="form-label">Subject</label>
+                <input type="text" id="cSubject" name="subject" class="form-input" placeholder="Engineering or Analytics Opportunity" />
+              </div>
+              <div class="form-group-full">
+                <label for="cMessage" class="form-label">Message *</label>
+                <textarea id="cMessage" name="message" class="form-textarea" placeholder="Tell me about your project or role opportunity..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================
+       PROJECT CASE STUDY MODAL (SLIDE-OVER / POPUP)
+       ====================================================== -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modalTitle">Project Title</h3>
+          <p class="modal-subtitle" id="modalSubtitle">Project Subtitle</p>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+          <svg style="width:18px;height:18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic Case Study Content Injected Here -->
+      </div>
+      <div class="modal-footer" id="modalFooter">
+        <!-- Action Buttons Injected Here -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-text">
+        Designed &amp; built by <strong>Adem Toumi</strong> &nbsp;&mdash;&nbsp; ESI-SBA, 2026
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/ademtoumi" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/toumi-adem-a0b4342b7/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <a href="mailto:a.toumi@esi-sba.dz" class="footer-link">Email</a>
+        <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" download="Adem_Toumi_CV.pdf" class="footer-link">CV ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
