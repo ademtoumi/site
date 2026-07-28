@@ -24,6 +24,7 @@
 
   <!-- ======================================================
        NAVIGATION
+       Task 2 Fix: Exactly ONE CV button in header navigation
        ====================================================== -->
   <header class="header" id="header">
     <nav class="nav container">
@@ -37,9 +38,8 @@
         <li><a href="#projects"   class="nav-link">Projects</a></li>
         <li><a href="#skills"     class="nav-link">Skills</a></li>
         <li><a href="#education"  class="nav-link">Education</a></li>
-        <li><a href="#cv"         class="nav-link">CV</a></li>
         <li><a href="#contact"    class="nav-link">Contact</a></li>
-        <li><a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-cv">CV ↗</a></li>
+        <li><a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" download="Adem_Toumi_CV.pdf" class="nav-link nav-link-cv">CV ↗</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -74,6 +74,8 @@
 
     <!-- ======================================================
          HERO
+         Task 3 Fix: Exactly ONE CV button in Hero section
+         Task 5 Fix: Complementing "AI & Data Science" text
          ====================================================== -->
     <section class="hero" id="home">
       <div class="hero-bg" aria-hidden="true">
@@ -101,7 +103,7 @@
               <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
           </a>
-          <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Download CV ↗</a>
+          <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" download="Adem_Toumi_CV.pdf" class="btn btn-outline">Download CV ↗</a>
           <a href="#contact" class="btn btn-ghost">Get in Touch</a>
         </div>
 
@@ -265,6 +267,8 @@
 
     <!-- ======================================================
          PROJECTS
+         Task 6.1: Short 1-2 sentence card descriptions
+         Task 6.3: Consistent navigation (Card click, title click, button click -> openCaseStudy)
          ====================================================== -->
     <section class="section" id="projects">
       <div class="container">
@@ -275,7 +279,7 @@
         </p>
 
         <!-- ── Featured: Master's & Engineering Thesis ── -->
-        <article class="project-featured fade-in" data-cat="thesis">
+        <article class="project-featured fade-in" data-cat="thesis" onclick="openCaseStudy('logAnomaly')" style="cursor:pointer;">
           <div class="project-feat-inner">
             <div class="prow">
               <div class="pbadges">
@@ -288,7 +292,7 @@
                 <span class="badge badge-xai">Explainable AI (XAI)</span>
                 <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2025–2026</span>
               </div>
-              <div class="plinks">
+              <div class="plinks" onclick="event.stopPropagation();">
                 <a href="https://github.com/ademtoumi/log-anomaly-detection"
                    target="_blank" rel="noopener noreferrer"
                    class="icon-btn repo-button" title="View Repository"
@@ -299,10 +303,10 @@
               </div>
             </div>
 
-            <h3 class="proj-feat-title">Log-Based Anomaly Detection in Distributed Systems:<br/><span class="proj-feat-subtitle">Real-Time Infrastructure Pipeline, Multi-Model Benchmark, and Explainable AI</span></h3>
+            <h3 class="proj-feat-title" onclick="openCaseStudy('logAnomaly')">Log-Based Anomaly Detection in Distributed Systems:<br/><span class="proj-feat-subtitle">Real-Time Infrastructure Pipeline, Multi-Model Benchmark, and Explainable AI</span></h3>
 
             <p class="proj-feat-desc">
-              Engineered a complete real-time anomaly detection system for distributed infrastructure: log streams ingest through Apache Kafka, cloud-deployed ML and transformer-based models classify entries in parallel, results persist to PostgreSQL, and a live Streamlit dashboard surfaces real-time alerts. Integrated XAI (Explainable AI) using SHAP and LIME to deliver on-demand token-level attribution for every anomaly flag.
+              Real-time distributed log anomaly detection streaming pipeline built with Apache Kafka, cloud ML/Transformer models, PostgreSQL, Streamlit, and SHAP/LIME Explainable AI.
             </p>
 
             <div class="feat-stats-bar">
@@ -330,7 +334,7 @@
               </div>
             </div>
 
-            <div class="proj-feat-footer">
+            <div class="proj-feat-footer" onclick="event.stopPropagation();">
               <div class="tag-group">
                 <span class="tag">Python</span>
                 <span class="tag">PyTorch</span>
@@ -357,7 +361,7 @@
         <div class="projects-grid">
 
           <!-- KnowledgeHub AI (Flagship RAG Platform) -->
-          <article class="project-card fade-in" data-cat="nlp">
+          <article class="project-card fade-in" data-cat="nlp" onclick="openCaseStudy('knowledgeHub')" style="cursor:pointer;">
             <div class="prow">
               <div class="pbadges">
                 <span class="badge badge-nlp">RAG &amp; LLMs</span>
@@ -366,14 +370,13 @@
                 <span class="badge badge-xai">Explainable AI</span>
                 <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2026</span>
               </div>
-              <a href="https://github.com/ademtoumi/KnowledgeHub-AI" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: KnowledgeHub AI">
+              <a href="https://github.com/ademtoumi/KnowledgeHub-AI" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: KnowledgeHub AI" onclick="event.stopPropagation();">
                 <svg aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
             </div>
-            <h3 class="proj-title">KnowledgeHub AI — Enterprise RAG Platform</h3>
+            <h3 class="proj-title" onclick="openCaseStudy('knowledgeHub')">KnowledgeHub AI — Enterprise RAG Platform</h3>
             <p class="proj-desc">
-              Built a production-ready document intelligence platform: organizations upload technical knowledge bases, query in natural language, and receive grounded answers with exact source citations.<br />
-              Engineered hybrid search (FAISS + BM25), Cross-Encoder reranking, Explainable AI attribution, FastAPI REST backend, React 18 frontend, and Docker Compose deployment.
+              Production-ready document intelligence platform featuring Hybrid Search (FAISS + BM25), Cross-Encoder reranking, Explainable AI citations, FastAPI, and React 18.
             </p>
             <div class="proj-metrics">
               <span class="metric metric-highlight">Hybrid Search (FAISS + BM25)</span>
@@ -391,14 +394,14 @@
               <span class="tag">Google Gemini</span>
               <span class="tag">Docker</span>
             </div>
-            <div style="margin-top:auto; display:flex; gap:0.75rem;">
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
               <button onclick="openCaseStudy('knowledgeHub')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
               <a href="https://github.com/ademtoumi/KnowledgeHub-AI" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
             </div>
           </article>
 
           <!-- UAV Object Detection -->
-          <article class="project-card fade-in" data-cat="internship">
+          <article class="project-card fade-in" data-cat="internship" onclick="openCaseStudy('uavDetection')" style="cursor:pointer;">
             <div class="prow">
               <div class="pbadges">
                 <span class="badge badge-cv">Computer Vision</span>
@@ -406,14 +409,13 @@
                 <span class="badge badge-internship">Edge AI &amp; Hardware</span>
                 <span class="badge badge-meta">URD Lab &nbsp;·&nbsp; 2024–2025</span>
               </div>
-              <a href="https://github.com/ademtoumi/UAV-Object-Detection-Tracking" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: UAV Object Detection">
+              <a href="https://github.com/ademtoumi/UAV-Object-Detection-Tracking" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: UAV Object Detection" onclick="event.stopPropagation();">
                 <svg aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
             </div>
-            <h3 class="proj-title">Real-Time Multi-Object Detection &amp; Tracking for UAV Surveillance</h3>
+            <h3 class="proj-title" onclick="openCaseStudy('uavDetection')">Real-Time Multi-Object Detection &amp; Tracking for UAV Surveillance</h3>
             <p class="proj-desc">
-              Built an end-to-end aerial surveillance system covering object detection, multi-target tracking, edge AI deployment, and Ground Control Station interface.<br />
-              Trained YOLOv11s models (mAP@0.5 ≈ 0.85), integrated DeepSort &amp; CSRT tracking pipelines, and deployed inference on Raspberry Pi 5 + Intel NCS 2.
+              Aerial drone surveillance pipeline with fine-tuned YOLOv11s object detection (mAP@0.5 ≈ 0.85), DeepSort/CSRT tracking, and edge AI hardware acceleration on Raspberry Pi 5.
             </p>
             <div class="proj-metrics">
               <span class="metric metric-highlight">mAP@0.5 ≈ 0.85</span>
@@ -429,14 +431,14 @@
               <span class="tag">Raspberry Pi 5</span>
               <span class="tag">Intel NCS 2</span>
             </div>
-            <div style="margin-top:auto; display:flex; gap:0.75rem;">
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
               <button onclick="openCaseStudy('uavDetection')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
               <a href="https://github.com/ademtoumi/UAV-Object-Detection-Tracking" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
             </div>
           </article>
 
           <!-- Malicious URL Detection -->
-          <article class="project-card fade-in" data-cat="ml">
+          <article class="project-card fade-in" data-cat="ml" onclick="openCaseStudy('maliciousUrl')" style="cursor:pointer;">
             <div class="prow">
               <div class="pbadges">
                 <span class="badge badge-ml">Machine Learning</span>
@@ -444,14 +446,13 @@
                 <span class="badge badge-cv">Cybersecurity</span>
                 <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2024–2025</span>
               </div>
-              <a href="https://github.com/ademtoumi/Malicious-URL-Detection" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: Malicious URL Detection">
+              <a href="https://github.com/ademtoumi/Malicious-URL-Detection" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: Malicious URL Detection" onclick="event.stopPropagation();">
                 <svg aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
             </div>
-            <h3 class="proj-title">Multi-Class Malicious URL Detection via Hybrid Feature Engineering</h3>
+            <h3 class="proj-title" onclick="openCaseStudy('maliciousUrl')">Multi-Class Malicious URL Detection via Hybrid Feature Engineering</h3>
             <p class="proj-desc">
-              Built a multi-class URL classifier to identify phishing, malware, and defacement threats.<br />
-              Engineered a hybrid feature set combining character n-grams with structural URL descriptors across 651,191 URLs, achieving 96.8% accuracy with Random Forest and XGBoost.
+              Cybersecurity ML classifier detecting phishing, malware, and defacement URLs using character n-grams and structural features (96.8% accuracy across 651K URLs).
             </p>
             <div class="proj-metrics">
               <span class="metric metric-highlight">96.8% Accuracy</span>
@@ -465,14 +466,14 @@
               <span class="tag">TensorFlow</span>
               <span class="tag">Pandas</span>
             </div>
-            <div style="margin-top:auto; display:flex; gap:0.75rem;">
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
               <button onclick="openCaseStudy('maliciousUrl')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
               <a href="https://github.com/ademtoumi/Malicious-URL-Detection/blob/main/report.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Report PDF ↗</a>
             </div>
           </article>
 
           <!-- Paraphrase Detection -->
-          <article class="project-card fade-in" data-cat="nlp">
+          <article class="project-card fade-in" data-cat="nlp" onclick="openCaseStudy('paraphrase')" style="cursor:pointer;">
             <div class="prow">
               <div class="pbadges">
                 <span class="badge badge-nlp">NLP</span>
@@ -480,14 +481,13 @@
                 <span class="badge badge-ds">Semantic Similarity</span>
                 <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2024–2025</span>
               </div>
-              <a href="https://github.com/ademtoumi/Paraphrase-Detection" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: Paraphrase Detection">
+              <a href="https://github.com/ademtoumi/Paraphrase-Detection" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: Paraphrase Detection" onclick="event.stopPropagation();">
                 <svg aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
             </div>
-            <h3 class="proj-title">Paraphrase Detection via Siamese Attention Deep Learning</h3>
+            <h3 class="proj-title" onclick="openCaseStudy('paraphrase')">Paraphrase Detection via Siamese Attention Deep Learning</h3>
             <p class="proj-desc">
-              Built a sentence-level semantic similarity system using a Siamese deep learning architecture with shared weights and multi-head attention mechanisms.<br />
-              Trained on large-scale NLP benchmarks (PAWS, QQP) to capture contextual semantic relationships across sentence pairs.
+              Sentence-level semantic similarity architecture using a Siamese Bi-LSTM neural network with multi-head attention trained on PAWS and QQP benchmarks.
             </p>
             <div class="proj-metrics">
               <span class="metric">≈450K Sentence Pairs</span>
@@ -501,28 +501,27 @@
               <span class="tag">NLTK</span>
               <span class="tag">WordNet</span>
             </div>
-            <div style="margin-top:auto; display:flex; gap:0.75rem;">
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
               <button onclick="openCaseStudy('paraphrase')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
               <a href="https://github.com/ademtoumi/Paraphrase-Detection" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
             </div>
           </article>
 
           <!-- HajjPortal -->
-          <article class="project-card fade-in" data-cat="web">
+          <article class="project-card fade-in" data-cat="web" onclick="openCaseStudy('hajjPortal')" style="cursor:pointer;">
             <div class="prow">
               <div class="pbadges">
                 <span class="badge badge-se">Software Engineering</span>
                 <span class="badge badge-web">Full-Stack Web</span>
                 <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2023–2024</span>
               </div>
-              <a href="https://github.com/ademtoumi/hajj-platform-frontend" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: HajjPortal">
+              <a href="https://github.com/ademtoumi/hajj-platform-frontend" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: HajjPortal" onclick="event.stopPropagation();">
                 <svg aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
             </div>
-            <h3 class="proj-title">HajjPortal — Trilingual Pilgrimage Management Platform</h3>
+            <h3 class="proj-title" onclick="openCaseStudy('hajjPortal')">HajjPortal — Trilingual Pilgrimage Management Platform</h3>
             <p class="proj-desc">
-              Built a full-stack, trilingual (Arabic, English, French) web platform for pilgrimage management — registration, reservations, lottery, and journey tracking.<br />
-              Implemented Next.js 14 App Router, dynamic RTL/LTR layout support, JWT authentication, and real-time administrative updates via WebSockets.
+              Full-stack web application with Next.js 14 App Router, dynamic RTL/LTR trilingual support, JWT authentication, and Socket.io real-time updates.
             </p>
             <div class="proj-metrics">
               <span class="metric">Next.js 14 App Router</span>
@@ -537,28 +536,27 @@
               <span class="tag">Socket.io</span>
               <span class="tag">Zod</span>
             </div>
-            <div style="margin-top:auto; display:flex; gap:0.75rem;">
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
               <button onclick="openCaseStudy('hajjPortal')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
               <a href="https://github.com/ademtoumi/hajj-platform-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
             </div>
           </article>
 
           <!-- KidLink -->
-          <article class="project-card fade-in" data-cat="mobile">
+          <article class="project-card fade-in" data-cat="mobile" onclick="openCaseStudy('kidlink')" style="cursor:pointer;">
             <div class="prow">
               <div class="pbadges">
                 <span class="badge badge-se">Software Engineering</span>
                 <span class="badge badge-mobile">Mobile Development</span>
                 <span class="badge badge-meta">ESI-SBA &nbsp;·&nbsp; 2022–2023</span>
               </div>
-              <a href="https://github.com/ademtoumi/KidLink-App" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: KidLink">
+              <a href="https://github.com/ademtoumi/KidLink-App" target="_blank" rel="noopener noreferrer" class="icon-btn repo-button" title="View Repository" aria-label="View Repository: KidLink" onclick="event.stopPropagation();">
                 <svg aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
             </div>
-            <h3 class="proj-title">KidLink — Cross-Platform School Communication App</h3>
+            <h3 class="proj-title" onclick="openCaseStudy('kidlink')">KidLink — Cross-Platform School Communication App</h3>
             <p class="proj-desc">
-              Built a cross-platform mobile application connecting parents, teachers, and administrators in primary schools.<br />
-              Implemented role-based workflows in Flutter, real-time push notifications via Firebase Cloud Messaging (FCM), and offline-first data sync with Cloud Firestore.
+              Cross-platform Flutter mobile app featuring role-based workflows, Firebase Authentication, Cloud Firestore offline persistence, and FCM push notifications.
             </p>
             <div class="proj-metrics">
               <span class="metric">Flutter Cross-Platform</span>
@@ -572,7 +570,7 @@
               <span class="tag">Cloud Firestore</span>
               <span class="tag">Firebase FCM</span>
             </div>
-            <div style="margin-top:auto; display:flex; gap:0.75rem;">
+            <div style="margin-top:auto; display:flex; gap:0.75rem;" onclick="event.stopPropagation();">
               <button onclick="openCaseStudy('kidlink')" class="btn btn-outline" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Case Study ↗</button>
               <a href="https://github.com/ademtoumi/KidLink-App" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">GitHub ↗</a>
             </div>
@@ -775,38 +773,10 @@
 
 
     <!-- ======================================================
-         CV SECTION (DEDICATED SECTION)
-         ====================================================== -->
-    <section class="section section-alt" id="cv">
-      <div class="container">
-        <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Curriculum Vitae</span></div>
-        <h2 class="section-title fade-in">Professional Resume</h2>
-        <p class="section-desc fade-in">
-          Explore my complete, industry-oriented CV summarizing my engineering achievements, dual master's degree, technical capabilities, and project portfolio.
-        </p>
-
-        <div class="cv-block fade-in">
-          <div class="cv-header-row">
-            <div>
-              <h3 class="cv-title">Adem Toumi — Industry Resume (PDF)</h3>
-              <p style="font-size:0.875rem; color:var(--text-2); margin-top:0.25rem;">State Engineer's Degree &amp; M.Sc., AI &amp; Data Science (2026)</p>
-            </div>
-            <div class="cv-actions">
-              <a href="Cv/CV_v2.pdf" download="Adem_Toumi_CV.pdf" class="btn btn-primary">Download CV (PDF)</a>
-              <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Open Full PDF ↗</a>
-            </div>
-          </div>
-
-          <iframe src="Cv/CV_v2.pdf" class="cv-viewer-frame" title="Adem Toumi Resume PDF Preview"></iframe>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ======================================================
          CONTACT
+         Task 4 Fix: Absolutely NO CV buttons/references in Contact section
          ====================================================== -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
       <div class="container contact-container">
         <div class="section-eyebrow fade-in"><span class="eyebrow-chip">Contact</span></div>
         <h2 class="section-title fade-in">Get In Touch</h2>
@@ -931,7 +901,7 @@
         <a href="https://github.com/ademtoumi" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
         <a href="https://www.linkedin.com/in/toumi-adem-a0b4342b7/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
         <a href="mailto:a.toumi@esi-sba.dz" class="footer-link">Email</a>
-        <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" class="footer-link">CV ↗</a>
+        <a href="Cv/CV_v2.pdf" target="_blank" rel="noopener noreferrer" download="Adem_Toumi_CV.pdf" class="footer-link">CV ↗</a>
       </div>
     </div>
   </footer>
