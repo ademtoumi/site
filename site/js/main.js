@@ -147,70 +147,30 @@ fadeEls.forEach(el => revealObserver.observe(el));
 
 
 /* ----------------------------------------------------------
-   TYPING EFFECT (hero subtitle)
-   Task 5 Fix: Complementing "AI & Data Science" with non-overlapping titles
-   ---------------------------------------------------------- */
-const WORDS   = ['Engineer', 'Architect', 'Specialist', 'Innovator'];
-let wordIdx   = 0;
-let charIdx   = 0;
-let deleting  = false;
-let typingTimer;
-
-function type() {
-  if (!typedEl) return;
-  const word = WORDS[wordIdx];
-
-  if (!deleting) {
-    typedEl.textContent = word.slice(0, charIdx + 1);
-    charIdx++;
-    if (charIdx === word.length) {
-      typingTimer = setTimeout(() => { deleting = true; type(); }, 2400);
-      return;
-    }
-  } else {
-    typedEl.textContent = word.slice(0, charIdx - 1);
-    charIdx--;
-    if (charIdx === 0) {
-      deleting = false;
-      wordIdx  = (wordIdx + 1) % WORDS.length;
-      typingTimer = setTimeout(type, 350);
-      return;
-    }
-  }
-  const speed = deleting ? 50 : 90;
-  typingTimer = setTimeout(type, speed);
-}
-setTimeout(type, 1000);
-
-
-/* ----------------------------------------------------------
-   ACADEMIC & PROFESSIONAL CASE STUDY DATA & MODAL LOGIC
-   Task 6.2: Academic & Technical Deep-Dives from Project Files
+   CASE STUDY DATA & MODAL LOGIC
+   Strictly grounded in all_works workspace files
    ---------------------------------------------------------- */
 const CASE_STUDIES = {
   logAnomaly: {
     title: "Log-Based Anomaly Detection in Distributed Systems",
     subtitle: "Dual Graduation Thesis (State Engineer & M.Sc.) — ESI-SBA (2025–2026)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Modern enterprise cloud platforms generate millions of log events per minute. Unstructured log entries contain vital signals regarding system health, security threats, and performance degradation. However, manual inspection is impossible, and traditional heuristic monitoring fails on complex distributed failures across HDFS, BGL, and Spirit supercomputing clusters.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Distributed infrastructure across HDFS, BGL, and Spirit supercomputing clusters generates high-velocity log streams. Detecting system failures requires automated log parsing, real-time ingestion pipelines, and interpretable model predictions for system operators.</p>
       
-      <h4>2. System Architecture & Pipeline Design</h4>
-      <p>The proposed framework establishes a real-time, streaming end-to-end processing pipeline:</p>
+      <h4>2. Pipeline Design & Engineering Implementation</h4>
       <ul>
-        <li><strong>Ingestion & Parsing:</strong> Raw log streams ingest via <strong>Apache Kafka</strong>. Log messages are parsed into structured templates using the Drain log parser, extracting dynamic parameter fields while preserving sequence structure.</li>
-        <li><strong>Windowing & Sessionization:</strong> Logs are windowed into discrete computational sessions (BlockID grouping for HDFS; sliding temporal windows for BGL and Spirit) under strict temporal train/test partitioning to prevent data leakage.</li>
-        <li><strong>Inference Microservices:</strong> Deployed parallel microservices evaluate 11 benchmarked classification architectures (SVM, Random Forest, Isolation Forest, BiLSTM, Attention-BiLSTM, Autoencoders, and LogBERT).</li>
-        <li><strong>Database & Streamlit Dashboard:</strong> Real-time alerts, confidence metrics, and sequence statistics persist to PostgreSQL and render live on a Streamlit monitoring interface.</li>
+        <li><strong>Log Parsing & Windowing:</strong> Raw log streams are parsed using the Drain log parser to extract structured templates. Log entries are grouped into sessions using BlockID grouping (HDFS) and sliding temporal windows (BGL/Spirit) with strict temporal train/test splitting to prevent data leakage.</li>
+        <li><strong>Real-Time Data Streaming:</strong> Apache Kafka streams log vectors continuously to downstream classification pipelines.</li>
+        <li><strong>Model Benchmark:</strong> Evaluated 11 machine learning and deep learning architectures, including Logistic Regression, SVM, Decision Tree, Random Forest, KNN, Naive Bayes, MLP, LSTM, BiLSTM, Attention-BiLSTM, Autoencoders, and LogBERT.</li>
+        <li><strong>Explainable AI (XAI):</strong> Integrated SHAP and LIME post-hoc interpretability models to calculate token-level attribution scores for every flagged anomaly.</li>
+        <li><strong>Analytics & Visualization:</strong> Log predictions and confidence metrics persist to PostgreSQL and render on an interactive Streamlit monitoring dashboard.</li>
       </ul>
 
-      <h4>3. Explainable AI (XAI) Integration</h4>
-      <p>To enable Site Reliability Engineers (SREs) to inspect anomaly alerts, post-hoc interpretability models (SHAP and LIME) calculate token-level attribution scores for every flagged session, highlighting exact log tokens contributing to the anomaly score.</p>
-
-      <h4>4. Key Empirical Benchmark Results</h4>
+      <h4>3. Key Benchmark Results</h4>
       <ul>
         <li><strong>HDFS Supervised Peak F1:</strong> 0.9958 (Attention-BiLSTM)</li>
-        <li><strong>HDFS Unsupervised Peak F1:</strong> 0.9571 (Optimized BiLSTM Autoencoder)</li>
+        <li><strong>HDFS Unsupervised Peak F1:</strong> 0.9571 (BiLSTM Autoencoder)</li>
         <li><strong>BGL & Spirit Performance:</strong> 0.997–0.999 F1 score across classical ML baseline classifiers.</li>
       </ul>
     `,
@@ -221,27 +181,26 @@ const CASE_STUDIES = {
 
   knowledgeHub: {
     title: "KnowledgeHub AI — Enterprise RAG Platform",
-    subtitle: "Flagship AI Engineering System — RAG, Hybrid Search & XAI (2026)",
+    subtitle: "Retrieval-Augmented Generation, Hybrid Search & Explainable AI — ESI-SBA (2026)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Enterprise knowledge bases suffer from data silos and unsearchable technical documentation. While Large Language Models (LLMs) provide natural language synthesis, ungrounded LLMs hallucinate inaccurate information. KnowledgeHub AI guarantees 100% factual accuracy through grounded retrieval-augmented generation.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Enterprise documentation (.pdf, .md, .txt) is often difficult to search using keyword queries, while ungrounded LLMs produce inaccurate answers. KnowledgeHub AI provides accurate document search and citation-backed answer synthesis.</p>
 
-      <h4>2. Technical Architecture & Component Design</h4>
+      <h4>2. Technical Architecture & Tech Stack</h4>
       <ul>
-        <li><strong>Document Ingestion & Chunking:</strong> Ingests <code>.pdf</code>, <code>.md</code>, and <code>.txt</code> documents using PyMuPDF and recursive character text splitting with configurable chunk size (500 tokens) and overlap (50 tokens).</li>
-        <li><strong>Hybrid Retrieval Engine (FAISS + BM25):</strong> Combines 384-dimensional dense semantic vectors (<code>all-MiniLM-L6-v2</code>) with sparse lexical keyword matching (Okapi BM25) using score fusion ($\alpha=0.6$).</li>
-        <li><strong>Cross-Encoder Reranking:</strong> Re-scores top candidate passages using joint query-context self-attention (<code>ms-marco-TinyBERT-L-2-v2</code>) in &lt; 15 ms on CPU.</li>
-        <li><strong>Anti-Hallucination LLM Synthesis:</strong> Passes reranked chunks into Google Gemini Flash with strict prompt constraints, falling back cleanly if context is insufficient.</li>
+        <li><strong>Document Ingestion:</strong> Ingests documents with PyMuPDF and recursively splits text into 500-token chunks with 50-token overlap.</li>
+        <li><strong>Hybrid Retrieval Engine:</strong> Combines dense vector search (FAISS + all-MiniLM-L6-v2 embeddings) with sparse keyword matching (Okapi BM25) using score fusion ($\alpha=0.6$).</li>
+        <li><strong>Cross-Encoder Reranking:</strong> Re-scores candidate passages using joint query-context self-attention (ms-marco-TinyBERT-L-2-v2) on CPU.</li>
+        <li><strong>Grounded LLM Synthesis:</strong> Passes reranked passages to Google Gemini Flash with factual constraints enforcing answers derived strictly from retrieved context.</li>
         <li><strong>Stack:</strong> FastAPI REST API backend, React 18 + Vite frontend, TanStack Query, Docker Compose containerization.</li>
       </ul>
 
-      <h4>3. Benchmark Evaluation Results</h4>
-      <p>Evaluated using an automated benchmark suite across 17 technical test queries against 15 enterprise reference documents (106 indexed vector passages):</p>
+      <h4>3. Benchmark Performance</h4>
       <ul>
         <li><strong>Hit Rate @ K=4:</strong> 94.1%</li>
         <li><strong>Mean Reciprocal Rank (MRR):</strong> 0.9412</li>
-        <li><strong>Average Query Latency:</strong> 621.4 ms</li>
-        <li><strong>Automated Test Suite:</strong> 116 passing unit and integration tests</li>
+        <li><strong>Average Latency:</strong> 621.4 ms</li>
+        <li><strong>Test Coverage:</strong> 116 passing unit and integration tests</li>
       </ul>
     `,
     github: "https://github.com/ademtoumi/KnowledgeHub-AI"
@@ -251,16 +210,16 @@ const CASE_STUDIES = {
     title: "Real-Time Multi-Object Detection & Tracking for UAV Surveillance",
     subtitle: "Research Internship — URD Laboratory (Feb. 2025 – Jun. 2025)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Aerial drone video streams present unique computer vision challenges: camera platform motion, rapid scale variations, small target sizes, and strict edge latency constraints. This project engineered a physical hardware-software aerial surveillance system for real-time target identification and tracking.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Aerial drone video streams involve camera platform motion, scale variations, and small target sizes. This project developed a real-time object detection and target tracking system for UAV surveillance.</p>
 
-      <h4>2. Architecture & Hardware Integration</h4>
+      <h4>2. System Design & Implementation</h4>
       <ul>
-        <li><strong>Object Detection Models:</strong> Fine-tuned YOLOv11s and YOLOv8 on VisDrone and custom military vehicle datasets, achieving mAP@0.5 ≈ 0.85 and 90%+ detection accuracy.</li>
-        <li><strong>Dual Tracking Pipeline:</strong> Integrated DeepSort for multi-object tracking and OpenCV CSRT for robust single-target tracking under occlusion and motion blur.</li>
-        <li><strong>Edge AI Hardware Acceleration:</strong> Deployed inference on Raspberry Pi 5 hardware coupled with an Intel Movidius Neural Compute Stick 2 (NCS 2) accelerator.</li>
-        <li><strong>Custom UDP Telemetry & Gimbal Control:</strong> Custom lightweight UDP video streaming protocol between drone payload and Ground Control Station PC. Gimbal control logic calculates target pixel offsets from frame center and issues real-time pan/tilt correction commands.</li>
-        <li><strong>Ground Control Station UI:</strong> Dark-themed Tkinter GCS interface featuring live video feed, click-to-track target selection, and real-time telemetry overlays.</li>
+        <li><strong>Object Detection:</strong> Trained YOLOv11s and YOLOv8 models on VisDrone and custom vehicle datasets (mAP@0.5 ≈ 0.85).</li>
+        <li><strong>Target Tracking:</strong> Integrated DeepSort for multi-object tracking and OpenCV CSRT for single-target tracking during occlusion.</li>
+        <li><strong>Edge Hardware Acceleration:</strong> Deployed model inference on Raspberry Pi 5 hardware accelerated by an Intel Movidius Neural Compute Stick 2 (NCS 2).</li>
+        <li><strong>UDP Streaming & Gimbal Control:</strong> Implemented a custom UDP video streaming protocol between drone hardware and Ground Control Station PC. Gimbal control logic calculates target pixel offsets from frame center to issue pan/tilt commands.</li>
+        <li><strong>Operator Interface:</strong> Built a Tkinter Ground Control Station UI with live video feed, click-to-track target selection, and telemetry overlays.</li>
       </ul>
     `,
     github: "https://github.com/ademtoumi/UAV-Object-Detection-Tracking"
@@ -270,14 +229,14 @@ const CASE_STUDIES = {
     title: "Multi-Class Malicious URL Detection via Hybrid Feature Engineering",
     subtitle: "Cybersecurity Machine Learning System — ESI-SBA (2024–2025)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Content-based web security scanners require downloading and executing web page content, exposing sandboxes to zero-day exploits. This system evaluates URL strings directly, classifying malicious links into benign, phishing, malware, and defacement threats without executing page content.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Content-based security scanners execute web page content, creating security risks and performance overhead. This system classifies malicious URLs directly from string metrics without executing web content.</p>
 
-      <h4>2. Feature Engineering & Machine Learning Pipeline</h4>
+      <h4>2. Pipeline & Model Evaluation</h4>
       <ul>
-        <li><strong>Hybrid Feature Extraction:</strong> Extracted character-level n-grams (TF-IDF vectorization) paired with 18 lexical and structural URL metrics (length, entropy, subdomains, special character frequencies, IP presence).</li>
-        <li><strong>Model Benchmark:</strong> Trained and benchmarked Random Forest, XGBoost, LightGBM, and Deep Neural Networks across 651,191 URLs.</li>
-        <li><strong>Results:</strong> Random Forest and XGBoost classifiers achieved 96.8% Macro F1 Score with sub-millisecond per-URL evaluation latency.</li>
+        <li><strong>Feature Engineering:</strong> Extracted character n-grams (TF-IDF) alongside 18 lexical and structural URL metrics (length, entropy, subdomains, special character ratios, IP presence).</li>
+        <li><strong>Classifiers:</strong> Evaluated Random Forest, XGBoost, and LightGBM across 651,191 URLs (4 classes: benign, phishing, malware, defacement).</li>
+        <li><strong>Results:</strong> Achieved 96.8% Macro F1 Score with sub-millisecond evaluation latency per URL.</li>
       </ul>
     `,
     github: "https://github.com/ademtoumi/Malicious-URL-Detection",
@@ -286,16 +245,16 @@ const CASE_STUDIES = {
 
   paraphrase: {
     title: "Paraphrase Detection via Siamese Attention Deep Learning",
-    subtitle: "NLP Semantic Similarity Architecture — ESI-SBA (2024–2025)",
+    subtitle: "NLP Semantic Similarity Model — ESI-SBA (2024–2025)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Traditional lexical overlap algorithms fail when two sentences share zero common words yet express identical semantic intent. This system builds a deep learning model for sentence-level paraphrase detection.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Lexical matching fails when sentence pairs express identical meaning using different vocabulary. This project built a deep learning model to evaluate sentence-level paraphrase similarity.</p>
 
-      <h4>2. Neural Architecture & Technical Details</h4>
+      <h4>2. Architecture & Training</h4>
       <ul>
-        <li><strong>Siamese Neural Network:</strong> Dual-branch Bidirectional LSTM (Bi-LSTM) network sharing identical weight matrices to map sentence pairs into a shared semantic latent space.</li>
-        <li><strong>Multi-Head Attention Mechanism:</strong> 4-head attention mechanism highlights contextual token dependencies across sentence boundaries.</li>
-        <li><strong>Loss Function & Training:</strong> Optimized with Focal Loss ($\alpha=0.75, \gamma=2$) on PAWS and QQP corpora (≈450,000 sentence pairs) to resolve class imbalance in complex sentence pairs.</li>
+        <li><strong>Siamese Neural Network:</strong> Dual-branch Bi-LSTM architecture sharing weights to project sentence pairs into a shared semantic latent space.</li>
+        <li><strong>Multi-Head Attention:</strong> 4-head attention mechanism highlights contextual token relationships.</li>
+        <li><strong>Training:</strong> Optimized using Focal Loss on PAWS and QQP datasets (≈450,000 sentence pairs).</li>
       </ul>
     `,
     github: "https://github.com/ademtoumi/Paraphrase-Detection"
@@ -303,17 +262,17 @@ const CASE_STUDIES = {
 
   hajjPortal: {
     title: "HajjPortal — Trilingual Pilgrimage Management Platform",
-    subtitle: "Full-Stack Web Software Engineering — ESI-SBA (2023–2024)",
+    subtitle: "Full-Stack Web Platform — ESI-SBA (2023–2024)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Managing large-scale regional pilgrimage logistics requires robust multi-tenant web platforms supporting complex workflows, real-time lottery drawings, and multi-language accessibility.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Managing regional pilgrimage logistics requires multi-language accessibility, real-time lottery management, and administrative tracking.</p>
 
-      <h4>2. Software Architecture</h4>
+      <h4>2. Architecture & Tech Stack</h4>
       <ul>
-        <li><strong>Frontend Framework:</strong> Built with Next.js 14 App Router, TypeScript, and Tailwind CSS.</li>
-        <li><strong>Trilingual & Layout Parity:</strong> Full internationalization (Arabic, English, French) with dynamic Right-to-Left (RTL) and Left-to-Right (LTR) layout switching.</li>
-        <li><strong>Real-Time Synchronization:</strong> Integrated Socket.io for live administrative status updates, lottery announcements, and passenger list sync.</li>
-        <li><strong>Validation & Security:</strong> Strict runtime input validation using Zod schemas and secure JWT authentication.</li>
+        <li><strong>Frontend:</strong> Next.js 14 App Router, TypeScript, and Tailwind CSS.</li>
+        <li><strong>Internationalization:</strong> Full Arabic, English, and French support with dynamic Right-to-Left (RTL) and Left-to-Right (LTR) layout switching.</li>
+        <li><strong>Real-Time Updates:</strong> Socket.io WebSockets for live status updates and lottery drawings.</li>
+        <li><strong>Validation:</strong> Input validation with Zod schemas and JWT authentication.</li>
       </ul>
     `,
     github: "https://github.com/ademtoumi/hajj-platform-frontend"
@@ -321,16 +280,16 @@ const CASE_STUDIES = {
 
   kidlink: {
     title: "KidLink — Cross-Platform School Communication App",
-    subtitle: "Mobile Application Development — ESI-SBA (2022–2023)",
+    subtitle: "Mobile Application — ESI-SBA (2022–2023)",
     body: `
-      <h4>1. Executive Overview & Problem Statement</h4>
-      <p>Primary schools require low-latency, role-based mobile communication channels connecting parents, teachers, and school administrators for announcements, attendance, and messaging.</p>
+      <h4>1. Problem & Context</h4>
+      <p>Primary schools require a reliable mobile communication tool for announcements, attendance tracking, and parent-teacher messaging.</p>
 
-      <h4>2. Technical Implementation</h4>
+      <h4>2. Architecture & Tech Stack</h4>
       <ul>
-        <li><strong>Cross-Platform Mobile:</strong> Developed in Flutter & Dart using Provider state management for smooth 60 FPS mobile rendering across Android and iOS.</li>
-        <li><strong>Push Notifications & Real-Time Sync:</strong> Integrated Firebase Cloud Messaging (FCM) for push notifications and Cloud Firestore for offline-first data persistence.</li>
-        <li><strong>Role-Based Security:</strong> Implemented 3 distinct user role workflows secured via Firebase Authentication rules.</li>
+        <li><strong>Mobile App:</strong> Flutter & Dart using Provider for state management across Android and iOS.</li>
+        <li><strong>Backend Services:</strong> Firebase Authentication, Cloud Firestore offline-first data synchronization, and Firebase Cloud Messaging (FCM) push notifications.</li>
+        <li><strong>Workflows:</strong> 3 role-based user interfaces for parents, teachers, and administrators.</li>
       </ul>
     `,
     github: "https://github.com/ademtoumi/KidLink-App"
